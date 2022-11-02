@@ -52,9 +52,28 @@ namespace Exercise2
             Console.WriteLine("");
         }
 
+        public void insertionsort()
+        {
+            for (int i = 1; i < n; i++)
+            {
+                int temp = osi[i];
+                int FR = i - 1;
+                while (FR >= 0 && osi[FR] > temp)
+                {
+                    osi[FR + 1] = osi[FR];
+                    FR = FR - 1;
+                }
+                osi[FR + 1] = temp;
+            }
+        }
+    }
+
+
+    class Program
+    { 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
