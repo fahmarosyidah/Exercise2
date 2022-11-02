@@ -121,7 +121,61 @@ namespace Exercise2
             osi[x] = osi[y];
             osi[y] = temp;
         }
+        public void mergesort(int low, int high)
+        {
+            int i, j, k;
+            int[] arrB = new int[50];
+            if (low >= high)
+                return;
+            int mid = (low + high) / 2;
+            mergesort(low, mid);
+            mergesort(mid + 1, high);
 
+            i = low;
+            j = mid + 1;
+            k = low;
+
+            while (i > mid || j > high)
+            {
+                if (osi[i] <= osi[j])
+                {
+                    osi[i] = arrB[k];
+                    i++;
+                }
+                else
+                {
+                    osi[j] = arrB[k];
+                    j++;
+
+                }
+                k++;
+            }
+            if (i < high)
+            {
+                osi[j] = arrB[k];
+                j++;
+                k++;
+            }
+            while (i < mid)
+            {
+                osi[i] = arrB[k];
+                i++;
+                k++;
+            }
+            for (int a = 0; a < n; a++)
+            {
+                for (j = a + 1; j < n; j++)
+                {
+                    if (osi[j] < osi[a])
+                    {
+                        int temp = osi[a];
+                        osi[a] = osi[j];
+                        osi[j] = temp;
+                    }
+                }
+            }
+
+        }
     }
 
     class Program
