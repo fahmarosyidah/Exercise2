@@ -2,8 +2,10 @@
 
 namespace Exercise2
 {
-    class Program
+    class InsertionSort
     {
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
