@@ -114,6 +114,13 @@ namespace Exercise2
             }
             Console.WriteLine("");
         }
+        public void swap(int x, int y)
+        {
+            int temp;
+            temp = osi[x];
+            osi[x] = osi[y];
+            osi[y] = temp;
+        }
 
     }
 
