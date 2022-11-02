@@ -128,6 +128,7 @@ namespace Exercise2
             if (low >= high)
                 return;
             int mid = (low + high) / 2;
+        
             mergesort(low, mid);
             mergesort(mid + 1, high);
 
@@ -204,8 +205,9 @@ namespace Exercise2
                     break;
                 case 2:
                     ex2.input();
-                    ex.insertionsort();
-                    ex.display();
+                    ex2.swap(int x, int y);
+                    ex2.mergesort(int low, int high);
+                    ex2.display();
                     break;
                 default:
                     Console.WriteLine("Pilihan salah!");
