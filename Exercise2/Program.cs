@@ -179,10 +179,41 @@ namespace Exercise2
     }
 
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
+            InsertionSort ex = new InsertionSort();
+            MergeSort ex2 = new MergeSort();
 
+            int pilih = 0;
+
+            Console.WriteLine("Pilih jenis algoritma");
+            Console.WriteLine("");
+            Console.WriteLine("1. Insertion Sort");
+            Console.WriteLine("2. Merge Sort");
+            Console.WriteLine("Pilih: ");
+            pilih = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+
+            switch (pilih)
+            {
+                case 1:
+                    ex.input();
+                    ex.insertionsort();
+                    ex.display();
+                    break;
+                case 2:
+                    ex2.input();
+                    ex.insertionsort();
+                    ex.display();
+                    break;
+                default:
+                    Console.WriteLine("Pilihan salah!");
+                    Console.ReadKey();
+                    break;
+            }
+            Console.WriteLine("\n\nTekan apa saja untuk keluar");
+            Console.Read();
         }
     }
 }
