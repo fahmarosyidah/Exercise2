@@ -38,6 +38,20 @@ namespace Exercise2
             }
         }
 
+        public void display()
+        {
+            //Menampilkan array yang tersusun
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("Masukkan elemen array yang telah tersusun");
+            Console.WriteLine("-----------------------------------------");
+            for (int FR = 0; FR < n; FR++)
+            {
+                Console.WriteLine(osi[FR]);
+            }
+            Console.WriteLine("");
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
